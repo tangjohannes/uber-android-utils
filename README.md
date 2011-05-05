@@ -8,8 +8,8 @@ This repository offers a set of random useful classes to deal with asynchronous 
 Usage
 -----
 Why having a UberAsyncTask when we can use the AsyncTask class from the Android SDK? Two reasons:
- - UberAsyncTask makes it possible to queue requests
- - UberAsyncTask does not require to create a new instance after the execution has finished
+ * UberAsyncTask makes it possible to queue requests
+ * UberAsyncTask does not require to create a new instance after the execution has finished
 
 The ImageLoader is a good example of how UberAsyncTask should be used. You extend it, add your custom addTask method and bind a listener to it.
 
