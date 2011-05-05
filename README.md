@@ -7,7 +7,7 @@ This repository offers a set of random useful classes to deal with asynchronous 
 
 Usage
 -----
-Why having a UberAsyncTask when we can use the AsyncTask class from the Android SDK? Two reasons:
+Why having a UberAsyncTask when one can use the AsyncTask class from the Android SDK? Two reasons:
 
 - UberAsyncTask makes it possible to queue requests
 - UberAsyncTask does not require to create a new instance after the execution has finished
