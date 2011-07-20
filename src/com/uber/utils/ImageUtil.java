@@ -40,15 +40,16 @@ public class ImageUtil {
 		Options options = new BitmapFactory.Options();
 		options.inSampleSize = 1;
 		options.inJustDecodeBounds = true;
-
 		try {
-			BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri), null, options);
-			if (!options.mCancel && options.outWidth != -1 && options.outHeight != -1) {
-				options.inSampleSize = computeSampleSize(options.outWidth, options.outHeight, sizeTarget);
-				options.inJustDecodeBounds = false;
-				options.inDither = false;
-				options.inPreferredConfig = Bitmap.Config.ARGB_8888;
-				bitmap = BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri), null, options);
+			if (contentResolver != null && imageUri != null) {
+				BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri), null, options);
+				if (!options.mCancel && options.outWidth != -1 && options.outHeight != -1) {
+					options.inSampleSize = computeSampleSize(options.outWidth, options.outHeight, sizeTarget);
+					options.inJustDecodeBounds = false;
+					options.inDither = false;
+					options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+					bitmap = BitmapFactory.decodeStream(contentResolver.openInputStream(imageUri), null, options);
+				}
 			}
 		} catch (IOException ioe) {
 			ioe.printStackTrace();

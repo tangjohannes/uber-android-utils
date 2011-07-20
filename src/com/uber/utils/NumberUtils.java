@@ -17,5 +17,13 @@ public class NumberUtils {
 			return null;
 		}
 	}
+	
+	public static Long parseLong(String longString) {
+		try {
+			return Long.valueOf(longString);
+		} catch (NumberFormatException nfe) {
+			return null;
+		}
+	}
 
 }
