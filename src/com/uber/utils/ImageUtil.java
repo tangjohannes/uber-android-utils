@@ -19,7 +19,6 @@ import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.net.Uri;
-import android.util.DisplayMetrics;
 import android.util.Log;
 
 public class ImageUtil {
