@@ -14,7 +14,7 @@ public class NumberUtils {
 		try {
 			return Double.valueOf(doubleString);
 		} catch (NumberFormatException nfe) {
-			return null;
+			return parseInteger(doubleString).doubleValue();
 		}
 	}
 
