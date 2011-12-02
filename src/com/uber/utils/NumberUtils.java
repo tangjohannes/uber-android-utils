@@ -17,12 +17,20 @@ public class NumberUtils {
 			return null;
 		}
 	}
-	
+
 	public static Long parseLong(String longString) {
 		try {
 			return Long.valueOf(longString);
 		} catch (NumberFormatException nfe) {
 			return null;
+		}
+	}
+
+	public static String intToTwoDigitsString(Integer i) {
+		if (i < 10) {
+			return "0" + i;
+		} else {
+			return i.toString();
 		}
 	}
 
