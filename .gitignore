@@ -1,0 +1,6 @@
+# eclipse noise
+bin/
+
+# osx noise
+.DS_Store
+profile
