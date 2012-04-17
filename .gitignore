@@ -1,5 +1,6 @@
 # eclipse noise
 bin/
+gen/
 
 # osx noise
 .DS_Store
